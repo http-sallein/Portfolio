@@ -13,17 +13,18 @@ export const GlobalStyle = createGlobalStyle`
 
     body { 
         position: absolute;
-        width: calc(100% - 80px);
+        width: calc(100% - 120px);
         display: flex;
         align-items: center;
-        right: 0;
         justify-content: center;
+        right: 0;
         min-height: 100vh;
         font-family: "Lexend Deca", sans-serif;
 
         background-color: ${({ theme }) => theme.background};
         color: ${({ theme }) => theme.color};
         transition: background-color 0.3s ease, color 0.3s ease;
+
 
         user-select: none;  
     }

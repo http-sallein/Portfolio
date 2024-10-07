@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import { CiLinkedin as LinkedinIcon} from "react-icons/ci";
 import { FiGithub as GitHubIcon } from "react-icons/fi";
 import { FaInstagram as InstagramIcon } from "react-icons/fa";
+import { AiOutlineLinkedin as LinkedinIcon } from "react-icons/ai";
 
 import HomeImage from "../assets/homeImg.jpg";
 
@@ -25,19 +25,27 @@ const Section = styled.section`
 
     display: flex;
     flex-direction: column;
+    align-items: start;
+
     gap: .5rem;
     
     > div {
 
+        h1 {
+            font-size: 4rem;
+            text-align: left;
+            font-weight: 900;
+            margin-left: -5px;
+        }
+
         > p {
-            line-height: .4;
+            line-height: 0;
+            margin-left: -2px;
+            margin-bottom: -5px;
         }
     }
 
-    h1 {
-        font-size: 4rem;
-    }
-`;
+    `;
 
 const SocialMedias = styled.div`
 
@@ -52,6 +60,7 @@ const SocialMedias = styled.div`
 
     > li:first-child {
         font-size: 2.5rem;
+        margin-left: -4px;
     }
 `
 
@@ -59,7 +68,7 @@ export const Home = () => {
 
     return (
 
-        <Fragment width={"800px"} >
+        <Fragment width={"800px"} justifyContent="center" alignItems="center">
             <Figure>
                 <img src={HomeImage} alt="Image which represent me" />
             </Figure>
@@ -68,7 +77,6 @@ export const Home = () => {
 
                 <div>
                     <p>Prazer, eu sou </p>
-
                     <h1>Isaac Andrade</h1>
                 </div>
                 
