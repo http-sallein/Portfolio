@@ -12,8 +12,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body { 
+        position: absolute;
+        width: calc(100% - 80px);
         display: flex;
         align-items: center;
+        right: 0;
         justify-content: center;
         min-height: 100vh;
         font-family: "Lexend Deca", sans-serif;
@@ -21,8 +24,11 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${({ theme }) => theme.background};
         color: ${({ theme }) => theme.color};
         transition: background-color 0.3s ease, color 0.3s ease;
+
+        user-select: none;  
     }
 
     li { list-style-type: none }
 
+    p { font-size: 1.5rem; line-height: 1.3 }
 `;

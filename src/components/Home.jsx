@@ -37,16 +37,14 @@ const Section = styled.section`
     h1 {
         font-size: 4rem;
     }
-
-    p {
-        font-size: 1.5rem;
-    }
 `;
 
 const SocialMedias = styled.div`
+
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    margin-top: 8px;
 
     > li {
         font-size: 2rem;

@@ -1,16 +1,14 @@
 import { Home } from "./components/Home"
+import { Header } from "./components/Header"
 
-
-import { ThemeToggle } from "./components/ToggleTheme"
 
 
 export const App = () => {
 
     return (
         <>
-        
-        <ThemeToggle/>
-        <Home />
+            <Header/>
+            <Home />
         </>
 
     )

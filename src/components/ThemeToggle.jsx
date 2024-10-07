@@ -4,11 +4,18 @@ import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../styles/GlobalStyles'; 
 import { light, dark } from '../styles/themes';
 
+import { MdOutlineDarkMode as MoonIcon} from "react-icons/md";
+import { CiSun as SunIcon} from "react-icons/ci";
+
 const Button = styled.button`
 
-    position: absolute;
-    bottom: 16px; 
-    right: 16px
+    font-size: 3rem; 
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: ${({ theme }) => theme.color};
+
+
 `;
 
 export const ThemeToggle = () => {
@@ -22,7 +29,7 @@ export const ThemeToggle = () => {
         <ThemeProvider theme={isDarkMode ? dark : light}>
             <GlobalStyle />
             <Button onClick={toggleTheme}>
-                Toggle to {isDarkMode ? 'Light' : 'Dark'} Mode
+                {isDarkMode ? <SunIcon/> : <MoonIcon/>}
             </Button>
         </ThemeProvider>
     );
