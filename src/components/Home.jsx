@@ -85,7 +85,7 @@ export const Home = () => {
                 </div>
                 
                 <p>
-                    Técnico em informática e graduando em Engenharia de Software na <a href="https://jala.university/" target="__blank">@JalaUniversity</a>!
+                    Técnico em informática e graduando em Engenharia de Software na <a href="https://jala.university/" target="__blank">@JalaUniversity!</a>
                 </p>
 
                 <SocialMedias>
