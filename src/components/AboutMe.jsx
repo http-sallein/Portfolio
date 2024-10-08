@@ -54,6 +54,7 @@ export const AboutMe = () => {
                 <div></div>
                 <button>Ver mais sobre mim!</button>
             </MoreContainer>
+
         </Fragment>
     );
 }

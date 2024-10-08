@@ -7,7 +7,7 @@ const Container = styled.div`
     justify-content: ${props => props.justifyContent};
     align-items: ${props => props.alignItems};
     gap: 1rem;
-    max-width: ${props => props.width } !important;
+    margin: 0 auto !important;
     padding: 2rem; 
     flex-direction: ${props => props.flexDirection};
     min-height: 100vh;
@@ -15,14 +15,23 @@ const Container = styled.div`
 
 `;
 
-export const Fragment = ({ children, width, justifyContent, alignItems, flexDirection, backgroundColor }) => 
+const Div = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+`;
+
+export const Fragment = ({ children, width, justifyContent, alignItems, flexDirection, backgroundColor, isWithDiv = 1 }) => 
     <Container 
         width = {width}  
         justifyContent = {justifyContent} 
         alignItems = {alignItems}
         flexDirection = {flexDirection}
         backgroundColor = {backgroundColor}
-    > {children} </Container>
+    > 
+        { isWithDiv ? <Div>{children}</Div> : children }
+    </Container>
  
 Fragment.propTypes = {
 
@@ -31,5 +40,6 @@ Fragment.propTypes = {
     justifyContent: PropTypes.string,
     alignItems: PropTypes.string,
     flexDirection: PropTypes.string,
-    backgroundColor: PropTypes.string
+    backgroundColor: PropTypes.string,
+    isWithDiv: PropTypes.bool
 };

@@ -10,7 +10,7 @@ import { Fragment } from "../layout/Fragment";
 
 const Figure = styled.figure`
     object-fit: cover;
-    width: 50%;
+    width: 260px;
     border-radius: 8px;
 
     > img {
@@ -45,6 +45,10 @@ const Section = styled.section`
         }
     }
 
+    p {
+        max-width: 500px;
+    }
+
     `;
 
 const SocialMedias = styled.div`
@@ -68,7 +72,7 @@ export const Home = () => {
 
     return (
 
-        <Fragment width={"800px"} justifyContent="center" alignItems="center">
+        <Fragment justifyContent="center" alignItems="center" isWithDiv={0}>
             <Figure>
                 <img src={HomeImage} alt="Image which represent me" />
             </Figure>
@@ -81,7 +85,7 @@ export const Home = () => {
                 </div>
                 
                 <p>
-                    Técnico em informática e graduando em Engenharia de Software na Jala University!
+                    Técnico em informática e graduando em Engenharia de Software na <a href="https://jala.university/" target="__blank">@JalaUniversity</a>!
                 </p>
 
                 <SocialMedias>

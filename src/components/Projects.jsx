@@ -16,6 +16,8 @@ const Section = styled.section`
     display: flex;
     flex-wrap: wrap;
 
+    justify-content: center;
+
     > div {
         width: 20rem;
         height: 45rem;
