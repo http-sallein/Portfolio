@@ -8,6 +8,15 @@ import HomeImage from "../assets/homeImg.jpg";
 
 import { Fragment } from "../layout/Fragment";
 
+const Div = styled.div`
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    margin-bottom: -20rem;
+    align-items: center;
+`;
+
 const Figure = styled.figure`
     object-fit: cover;
     width: 260px;
@@ -73,28 +82,32 @@ export const Home = () => {
     return (
 
         <Fragment justifyContent="center" alignItems="center" isWithDiv={0}>
-            <Figure>
-                <img src={HomeImage} alt="Image which represent me" />
-            </Figure>
 
-            <Section>
+            <Div>
 
-                <div>
-                    <p>Prazer, eu sou </p>
-                    <h1>Isaac Andrade</h1>
-                </div>
-                
-                <p>
-                    Técnico em informática e graduando em Engenharia de Software na <a href="https://jala.university/" target="__blank">@JalaUniversity!</a>
-                </p>
+                <Figure>
+                    <img src={HomeImage} alt="Image which represent me" />
+                </Figure>
 
-                <SocialMedias>
-                    <li> <a href="" target="__blank"> <LinkedinIcon/> </a> </li>
-                    <li> <a href="" target="__blank"> <GitHubIcon/> </a> </li>
-                    <li> <a href="" target="__blank"> <InstagramIcon/> </a> </li>
-                </SocialMedias>
+                <Section>
 
-            </Section>
+                    <div>
+                        <p>Prazer, eu sou </p>
+                        <h1>Isaac Andrade</h1>
+                    </div>
+                    
+                    <p>
+                        Técnico em informática e graduando em Engenharia de Software na <a href="https://jala.university/" target="__blank">@JalaUniversity!</a>
+                    </p>
+
+                    <SocialMedias>
+                        <li> <a href="" target="__blank"> <LinkedinIcon/> </a> </li>
+                        <li> <a href="" target="__blank"> <GitHubIcon/> </a> </li>
+                        <li> <a href="" target="__blank"> <InstagramIcon/> </a> </li>
+                    </SocialMedias>
+
+                </Section>
+            </Div>
         </Fragment>
     )
 }

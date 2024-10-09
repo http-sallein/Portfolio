@@ -21,6 +21,7 @@ const Section = styled.section`
     gap: 2rem;
     flex-wrap: wrap;
 
+
     h3 { font-size: 2rem; max-width: 300px; text-align: center;}
 
     > div {
