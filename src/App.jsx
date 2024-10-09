@@ -9,12 +9,13 @@ export const App = () => {
 
     return (
         <>
-            <Header/>
             <Home />
             <AboutMe />
             <Projects />
             <Services />
             <ContactMe />
+            <Header/>
+
         </>
     )
 }

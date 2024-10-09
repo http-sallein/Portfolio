@@ -22,13 +22,15 @@ const Div = styled.div`
     margin: 0 auto;
 `;
 
-export const Fragment = ({ children, width, justifyContent, alignItems, flexDirection, backgroundColor, isWithDiv = 1 }) => 
+export const Fragment = ({ children, width, justifyContent, alignItems, flexDirection, backgroundColor, isWithDiv = 1, id }) => 
     <Container 
         width = {width}  
         justifyContent = {justifyContent} 
         alignItems = {alignItems}
         flexDirection = {flexDirection}
         backgroundColor = {backgroundColor}
+        id={id}
+        className='section'
     > 
         { isWithDiv ? <Div>{children}</Div> : children }
     </Container>
@@ -41,5 +43,6 @@ Fragment.propTypes = {
     alignItems: PropTypes.string,
     flexDirection: PropTypes.string,
     backgroundColor: PropTypes.string,
-    isWithDiv: PropTypes.bool
+    isWithDiv: PropTypes.bool,
+    id: PropTypes.string
 };

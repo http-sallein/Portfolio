@@ -95,7 +95,7 @@ export const Projects = () => {
 
     return (
 
-        <Fragment flexDirection={'column'}>
+        <Fragment flexDirection={'column'} id={'projects'}>
 
             <Title>Projetos.</Title>
 
