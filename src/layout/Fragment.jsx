@@ -7,10 +7,10 @@ const Container = styled.div`
     justify-content: ${props => props.justifyContent};
     align-items: ${props => props.alignItems};
     gap: 1rem;
-    margin: 0 auto !important;
+    margin: 0 auto;
+    margin-bottom: 20rem;
     padding: 2rem; 
     flex-direction: ${props => props.flexDirection};
-    min-height: 100vh;
     background-color: ${props => props.backgroundColor};
 
 `;
