@@ -81,7 +81,7 @@ export const Home = () => {
 
     return (
 
-        <Fragment justifyContent="center" alignItems="center" isWithDiv={0}>
+        <Fragment justifyContent="center" alignItems="center" isWithDiv={false} id={'home'}>
 
             <Div>
 

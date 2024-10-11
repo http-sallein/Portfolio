@@ -38,7 +38,7 @@ export const AboutMe = () => {
 
     return (
 
-        <Fragment flexDirection={'column'}>
+        <Fragment flexDirection={'column'} id={'aboutMe'}>
 
             <Title> Quem sou eu? </Title>
 
