@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 const Container = styled.div`
     display: flex;
-    justify-content: ${props => props.justifyContent};
-    align-items: ${props => props.alignItems};
+    justify-content: ${props => props.justifyContent || 'center'};
+    align-items: ${props => props.alignItems || 'center'};
     gap: 1rem;
     margin: 0 auto;
     margin-bottom: 20rem;

@@ -67,6 +67,10 @@ const Head = styled.header`
         .active {
             background-color: blue;
         }
+
+        .section {
+            scroll-snap-align: start;
+        }
     }
 `;
 

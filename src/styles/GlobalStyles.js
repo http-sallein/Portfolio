@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
         src: url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     * { 
         padding: 0; margin: 0; box-sizing: border-box 
     }
@@ -24,7 +28,6 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${({ theme }) => theme.background};
         color: ${({ theme }) => theme.color};
         transition: background-color 0.3s ease, color 0.3s ease;
-
 
         user-select: none;  
     }
