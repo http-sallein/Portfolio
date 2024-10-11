@@ -5,6 +5,8 @@ import { Fragment } from "../layout/Fragment";
 const Section = styled.section`
     padding: 2rem 0;
     text-align: center;
+    min-height: 80vh;
+
 `;
 
 const Title = styled.h2`
@@ -122,7 +124,7 @@ export const Trajectory = () => {
 
     return (
 
-        <Fragment>    
+        <Fragment id="trajectory">    
             <Section>
                 <Title>Trajetória.</Title>
                 <Subtitle>Minha jornada pessoal</Subtitle>

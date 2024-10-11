@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
+
 import styled from 'styled-components';
+
 import { IoHomeOutline as HomeIcon } from "react-icons/io5";
 import { CgProfile as AboutMeIcon } from "react-icons/cg";
 import { LuHammer as ProjectsIcon } from "react-icons/lu";
 import { MdOutlineTranslate as TranslateIcon } from "react-icons/md";
 import { GrServices as ServiceIcon} from "react-icons/gr";
 import { MdOutlineConnectWithoutContact as ContactMeIcon} from "react-icons/md";
+import { GiPathDistance as TrajectoryIcon} from "react-icons/gi";
+
 import { ThemeToggle } from './ThemeToggle';
 
 const Head = styled.header`
@@ -109,7 +113,8 @@ export const Header = () => {
                         <a href="#aboutMe" className={activeSection === 'aboutMe' ? 'active' : ''}><AboutMeIcon /></a>
                         <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}><ProjectsIcon /></a>
                         <a href="#services"  className={activeSection === 'services' ? 'active' : ''}> <ServiceIcon /> </a>
-                        <a href="#services"  className={activeSection === 'contact' ? 'active' : ''}> <ContactMeIcon /> </a>
+                        <a href="#trajectory"  className={activeSection === 'trajectory' ? 'active' : ''}> <TrajectoryIcon /> </a>
+                        <a href="#contact"  className={activeSection === 'contact' ? 'active' : ''}> <ContactMeIcon /> </a>
                     </ul>
 
                     <ul>
