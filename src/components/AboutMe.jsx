@@ -5,7 +5,7 @@ import { Fragment } from "../layout/Fragment";
 const Title = styled.h2`
 
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: bold;
 `
 
 const Paragraph = styled.p`

@@ -7,7 +7,7 @@ import { ModalProject } from "./ModalProject";
 
 const Title = styled.h2`
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: bold;
 `;
 
 const Section = styled.section`

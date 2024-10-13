@@ -17,13 +17,14 @@ const Title = styled.div`
 
         > h2 {
             font-size: 3rem;
-            font-weight: 800;
+            font-weight: bold;
             min-width: max-content;
             margin-left: -4px;
         }
 
         > p {
-            margin-bottom: -16px;
+            font-size: 1.5rem;
+            margin-bottom: -4px;
         }
     }
 `;

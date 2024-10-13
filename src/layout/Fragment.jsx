@@ -12,7 +12,7 @@ const Container = styled.div`
     padding: 2rem; 
     flex-direction: ${props => props.flexDirection};
     background-color: ${props => props.backgroundColor};
-
+    max-width: ${props => props.width};
 `;
 
 const Div = styled.div`
@@ -20,9 +20,10 @@ const Div = styled.div`
     flex-direction: column;
     gap: 1rem;
     margin: 0 auto;
+
 `;
 
-export const Fragment = ({ children, width, justifyContent, alignItems, flexDirection, backgroundColor, isWithDiv = 1, id }) => 
+export const Fragment = ({ children, width = 'auto', justifyContent, alignItems, flexDirection, backgroundColor, isWithDiv = 1, id }) => 
     <Container 
         width = {width}  
         justifyContent = {justifyContent} 

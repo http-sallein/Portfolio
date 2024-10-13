@@ -10,7 +10,7 @@ import { MdOutlineAppSettingsAlt as MaintenceIcon} from "react-icons/md";
 const Title = styled.h2`
 
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: bold;
     text-align: center;
 `;
 
@@ -22,7 +22,7 @@ const Section = styled.section`
     flex-wrap: wrap;
 
 
-    h3 { font-size: 2rem; max-width: 300px; text-align: center;}
+    h3 { font-size: 1.5rem; max-width: 300px; text-align: center;}
 
     > div {
         border: 1px solid black;
@@ -43,6 +43,7 @@ const Section = styled.section`
     }
 
     p {
+        font-size: 1.3rem;
         max-width: 400px;
         text-align: center;
     }

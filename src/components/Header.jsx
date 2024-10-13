@@ -23,13 +23,16 @@ const Head = styled.header`
 
     > section {
         height: 95%;
-        width: 5rem;
+        width: 4rem;
         border-radius: 1rem;
         padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: pink;
 
         > figure {
-            width: 100%;
+            width: 3rem;
             border-radius: .5rem;
 
             > img {
@@ -48,7 +51,7 @@ const Head = styled.header`
             align-items: center;
             justify-content: space-between;
             height: 85%;
-            font-size: 2rem;    
+            font-size: 1.5rem;    
 
             > ul {
                 display: inherit;

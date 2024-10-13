@@ -11,7 +11,7 @@ const Section = styled.section`
 
 const Title = styled.h2`
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: bold;
     margin-bottom: 0.5rem;
 `;
 
@@ -243,7 +243,20 @@ export const Trajectory = () => {
                                 <div></div>
                                 <div>
                                     <Rounder />
+                                    <Line />
                                 </div>
+                                <div>
+                                    <TitleData>Voluntariado de TI</TitleData>
+                                    <SubtitleData>Atados</SubtitleData>
+                                    <Calendar>
+                                        out/2024 - presente
+                                    </Calendar>
+                                </div>
+
+                            </Data>
+
+                            <Data>
+
                                 <div>
                                     <TitleData>Estágiario Full Stack</TitleData>
                                     <SubtitleData>Superintendência de Obras Públicas do Ceará (SOP-CE)</SubtitleData>
@@ -252,6 +265,9 @@ export const Trajectory = () => {
                                     </Calendar>
                                 </div>
 
+                                <div>
+                                    <Rounder />
+                                </div>
                             </Data>
                         </Content>
                     </Sections>

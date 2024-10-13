@@ -5,6 +5,7 @@ import { Projects } from "./components/Projects"
 import { Services } from './components/Services';
 import { ContactMe } from "./components/ContactMe";
 import { Trajectory } from "./components/Trajectory";
+import { Technologies } from "./components/Technologies";
 
 export const App = () => {
 
@@ -15,6 +16,7 @@ export const App = () => {
             <Projects />
             <Services />
             <Trajectory />
+            <Technologies />
             <ContactMe />
             <Header/>
 
