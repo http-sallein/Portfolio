@@ -96,6 +96,7 @@ const Div = styled.div`
             flex-direction: column;
             gap: 2rem;
 
+
             > label {
 
                 position: relative;
@@ -182,7 +183,7 @@ export const ContactMe = () => {
                             </div>
                             <h4> Linkedin </h4>
                             <p>devzac.andrade@gmail.com</p>
-                            <a href=""> Me escreva </a>
+                            <a href="https://www.linkedin.com/in/devsallein/"> Me escreva </a>
                         </span>
                         <span>
                             <div>
@@ -190,7 +191,7 @@ export const ContactMe = () => {
                             </div>
                             <h4> Whatsapp </h4>
                             <p> +55 (85) 98503-6011 </p>
-                            <a href=""> Me escreva </a>
+                            <a href="https://wa.me/+5585985036011?text=Olá%20podemos%20conversar?"> Me escreva </a>
                         </span>
                         <span>
                             <div>
@@ -198,7 +199,7 @@ export const ContactMe = () => {
                             </div>
                             <h4> Instagram </h4>
                             <p>@http.zaclimaaxs</p>
-                            <a href=""> Me escreva </a>
+                            <a href="https://www.instagram.com/http.zaclimaaxs/"> Me escreva </a>
                         </span>
                     </div>
                 </section>
@@ -207,40 +208,38 @@ export const ContactMe = () => {
                     <h3> Me escreva sobre o seu projeto </h3>
 
                     <form ref={form} onSubmit={sendEmail}>
-                        <div>
-                            <label>
-                                <p>Seu nome</p>
-                                <input 
-                                    type="text" 
-                                    name="user_name" 
-                                    placeholder="Insira seu nome" 
-                                    value={username} 
-                                    onChange={(e) => handleChangeUsername(e)} 
-                                    required 
-                                />
-                            </label>
+                        <label>
+                            <p>Seu nome</p>
+                            <input 
+                                type="text" 
+                                name="user_name" 
+                                placeholder="Insira seu nome" 
+                                value={username} 
+                                onChange={(e) => handleChangeUsername(e)} 
+                                required 
+                            />
+                        </label>
 
-                            <label>
-                                <p>seu email</p>
-                                <input 
-                                    type="email" 
-                                    name="user_email" 
-                                    placeholder="Insira seu email" 
-                                    value={email} 
-                                    onChange={(e) => handleChangeEmail(e)} 
-                                    required 
-                                />
-                            </label>
+                        <label>
+                            <p>seu email</p>
+                            <input 
+                                type="email" 
+                                name="user_email" 
+                                placeholder="Insira seu email" 
+                                value={email} 
+                                onChange={(e) => handleChangeEmail(e)} 
+                                required 
+                            />
+                        </label>
 
-                            <label>
-                                <p>Projeto</p>
-                                <input 
-                                    name="message" 
-                                    placeholder="Descreva sobre o seu projeto" 
-                                    required
-                                ></input>
-                            </label>
-                        </div>
+                        <label>
+                            <p>Projeto</p>
+                            <input 
+                                name="message" 
+                                placeholder="Descreva sobre o seu projeto" 
+                                required
+                            ></input>
+                        </label>
 
                         <button type="submit"> Enviar </button>
                     </form>

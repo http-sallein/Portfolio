@@ -62,14 +62,14 @@ const ModalContent = styled.div`
         &:nth-child(2) {
 
             button {
-                min-width: 400px;
                 border: none;
                 border-radius: .5rem;
                 display: flex;
                 gap: .5rem;
                 align-items: center;
                 justify-content: center;
-                padding: .5rem 3rem;
+                padding: .5rem 2rem;
+
                 cursor: pointer;
                 margin-top: 2rem;
                 font-weight: bold;
@@ -80,20 +80,17 @@ const ModalContent = styled.div`
             z-index: 0;
             position: relative;
 
-            background-color: pink;
 
             .swiper-container {
-                max-width: 800px !important;
-                background-color: pink;
+                max-width: 800px;
 
-                figure {
+                object-fit: cover;
 
-                    figure {
-                        max-width: max-content;
-                    }
+                figure {        
+                    overflow: hidden;
 
                     img {
-                        width: max-content;
+
                         opacity: .5;
                     }
                 }
