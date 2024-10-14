@@ -9,6 +9,7 @@ import { MdOutlineTranslate as TranslateIcon } from "react-icons/md";
 import { GrServices as ServiceIcon} from "react-icons/gr";
 import { MdOutlineConnectWithoutContact as ContactMeIcon} from "react-icons/md";
 import { GiPathDistance as TrajectoryIcon} from "react-icons/gi";
+import { GrTechnology as TechnologiesIcon} from "react-icons/gr";
 
 import { ThemeToggle } from './ThemeToggle';
 
@@ -16,6 +17,7 @@ const Head = styled.header`
     position: fixed;
     left: 1rem;
     display: flex;
+    z-index: 1;
     align-items: center;
     justify-content: center;
     top: 0;
@@ -117,6 +119,7 @@ export const Header = () => {
                         <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}><ProjectsIcon /></a>
                         <a href="#services"  className={activeSection === 'services' ? 'active' : ''}> <ServiceIcon /> </a>
                         <a href="#trajectory"  className={activeSection === 'trajectory' ? 'active' : ''}> <TrajectoryIcon /> </a>
+                        <a href="#technologies" className={activeSection === 'technologies' ? 'active' : ''}> <TechnologiesIcon /> </a>
                         <a href="#contact"  className={activeSection === 'contact' ? 'active' : ''}> <ContactMeIcon /> </a>
                     </ul>
 

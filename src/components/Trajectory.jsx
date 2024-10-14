@@ -169,20 +169,21 @@ export const Trajectory = () => {
                                     <Line />
                                 </div>
                                 <div>
-                                    <TitleData>Desenvolvimento Full Stack</TitleData>
-                                    <SubtitleData>Digital College | Geração Tech (1a Edição)</SubtitleData>
+                                    <TitleData>Desenvolvimento Front-End</TitleData>
+                                    <SubtitleData>Instituto Algar | Jovens de Talento TI</SubtitleData>
                                     <Calendar>
-                                        ago/2024 - out/2024
+                                        set/2024 - dez/2024
                                     </Calendar>
                                 </div>
                             </Data>
 
                             <Data>
+
                                 <div>
-                                    <TitleData>AWS Academy Cloud Foundations</TitleData>
-                                    <SubtitleData>Amazon Web Services (AWS)</SubtitleData>
+                                    <TitleData>Desenvolvimento Full Stack</TitleData>
+                                    <SubtitleData>Digital College | Geração Tech (1a Edição)</SubtitleData>
                                     <Calendar>
-                                        jun/2023
+                                        ago/2024 - out/2024
                                     </Calendar>
                                 </div>
 
@@ -198,6 +199,17 @@ export const Trajectory = () => {
                                     <Rounder />
                                     <Line />
                                 </div>
+
+                                <div>
+                                    <TitleData>AWS Academy Cloud Foundations</TitleData>
+                                    <SubtitleData>Amazon Web Services (AWS)</SubtitleData>
+                                    <Calendar>
+                                        jun/2023
+                                    </Calendar>
+                                </div>
+                            </Data>
+
+                            <Data>
                                 <div>
                                     <TitleData>Suporte Técnico em TI</TitleData>
                                     <SubtitleData>Dell Lead</SubtitleData>
@@ -205,18 +217,24 @@ export const Trajectory = () => {
                                         fev/2023 - abril/2023
                                     </Calendar>
                                 </div>
+
+                                <div>
+                                    <Rounder />
+                                    <Line />
+                                </div>
                             </Data>
 
                             <Data>
+                                <div></div>
+                                <div>
+                                    <Rounder />
+                                </div>
                                 <div>
                                     <TitleData>Técnico em Informática</TitleData>
                                     <SubtitleData>EEEP Professor Onélio Porto</SubtitleData>
                                     <Calendar>
                                         2021 - 2023
                                     </Calendar>
-                                </div>
-                                <div>
-                                    <Rounder />
                                 </div>
                             </Data>
                         </Content>

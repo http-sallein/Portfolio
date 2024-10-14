@@ -14,7 +14,6 @@ import { FaGithub as GitHubIcon } from "react-icons/fa";
 import { FaReact as ReactIcon } from "react-icons/fa";
 import { FaCss3 as CSSIcon} from "react-icons/fa";
 
-
 const Title = styled.h2`
     font-size: 3rem;
     font-weight: bold;
@@ -70,7 +69,7 @@ export const Technologies = () => {
 
     return (
 
-        <Fragment width={'55rem'}>
+        <Fragment width={'55rem'} id={'technologies'}>
 
                 
                 <Title> Tecnologias  </Title>

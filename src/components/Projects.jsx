@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { FaExternalLinkAlt as LinkIcon } from "react-icons/fa";
 import { Fragment } from "../layout/Fragment";
-import test from './../assets/homeImg.jpg';
 import { useState } from "react";
 import { ModalProject } from "./ModalProject";
+
+import { projects } from "../../api/projects";
 
 const Title = styled.h2`
     font-size: 3rem;
@@ -86,8 +87,8 @@ export const Projects = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    const handleClickProject = (imageSrc) => {
-        setSelectedImage(imageSrc);
+    const handleClickProject = (project) => {
+        setSelectedImage(project.imgPath);
         setIsModalOpen(true);
     };
 
@@ -102,23 +103,21 @@ export const Projects = () => {
 
         <Section>
 
-            <div onClick={() => handleClickProject(test)}>
-                <figure> <img src={test} alt="LandingPage"/> </figure>
-                <p>LandingPage</p>
-                <span> <LinkIcon /> </span>
-            </div>
+            { projects.map(project => 
+                (
+                    <div onClick={() => handleClickProject(project)} key={project}>
 
-            <div onClick={() => handleClickProject(test)}>
-                <figure> <img src={test} alt="LandingPage"/> </figure>
-                <p>LandingPage</p>
-                <span> <LinkIcon /> </span>
-            </div>
+                        <figure>
+                            <img src={project.imgPath} alt="img project" />
+                        </figure>
 
-            <div onClick={() => handleClickProject(test)}>
-                <figure> <img src={test} alt="LandingPage"/> </figure>
-                <p>LandingPage</p>
-                <span> <LinkIcon /> </span>
-            </div>
+                        <p> {project.name} </p>
+                        <span><LinkIcon/></span>
+                    </div>
+                )
+            )}
+
+           
         </Section>
 
         {isModalOpen && (
