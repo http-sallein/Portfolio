@@ -1,8 +1,9 @@
+import { useRef, useState } from "react";
+import emailjs from 'emailjs-com';
 import { Fragment } from "../layout/Fragment";
-
 import { AiOutlineLinkedin as LinkedinIcon } from "react-icons/ai";
-import { FaWhatsapp as WhatsappIcon} from "react-icons/fa";
-import { FaInstagram as InstagramIcon} from "react-icons/fa";
+import { FaWhatsapp as WhatsappIcon } from "react-icons/fa";
+import { FaInstagram as InstagramIcon } from "react-icons/fa";
 import styled from "styled-components";
 
 const Title = styled.div`
@@ -90,7 +91,7 @@ const Div = styled.div`
         display: flex;
         flex-direction: column;
 
-        > div {
+        > form {
             display: flex;
             flex-direction: column;
             gap: 2rem;
@@ -98,7 +99,6 @@ const Div = styled.div`
             > label {
 
                 position: relative;
-
                 width: 100%;
 
                 > p {
@@ -137,13 +137,35 @@ const Div = styled.div`
 `;
 
 export const ContactMe = () => {
+    const form = useRef(); // Referência ao formulário
+
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+
+    const handleChangeUsername = ({ target }) => { setUsername(target.value) }
+
+    const handleChangeEmail = ({ target }) => { setEmail(target.value) }
+
+    const sendEmail = (e) => {
+        e.preventDefault(); // Previne o comportamento padrão do formulário
+    
+        emailjs.sendForm(
+            'service_58vl6h5',
+            'template_o08gvy9',
+            form.current, 
+            'vFYYZcTW_8yw4iuCB'
+
+        ).then(() => {
+            alert("E-mail enviado com sucesso!"); // Mensagem de sucesso
+            e.target.reset(); // Reseta o formulário após o envio bem-sucedido
+        }).catch((error) => {
+            alert("Ocorreu um erro ao enviar o e-mail. Tente novamente.", error); // Mensagem de erro
+        });
+    };
 
     return (
-
         <Fragment id={'contact'}>
-
             <Title>
-
                 <div>
                     <p>pensou em um projeto?</p>
                     <h2>Contate-me!</h2>
@@ -153,68 +175,78 @@ export const ContactMe = () => {
             <Div>
                 <section>
                     <h3> Fale comigo </h3>
-            
                     <div>
-
                         <span>
                             <div>
                                 <LinkedinIcon/>
                             </div>
                             <h4> Linkedin </h4>
                             <p>devzac.andrade@gmail.com</p>
-
                             <a href=""> Me escreva </a>
                         </span>
-
                         <span>
                             <div>
-
                                 <WhatsappIcon/>
                             </div>
                             <h4> Whatsapp </h4>
                             <p> +55 (85) 98503-6011 </p>
-
                             <a href=""> Me escreva </a>
                         </span>
-
                         <span>
                             <div>
-
                                 <InstagramIcon/>
                             </div>
                             <h4> Instagram </h4>
                             <p>@http.zaclimaaxs</p>
-
                             <a href=""> Me escreva </a>
                         </span>
-
                     </div>
                 </section>
 
                 <section>
                     <h3> Me escreva sobre o seu projeto </h3>
 
-                    <div>
-                        <label>
-                            <p>Seu nome</p>
-                            <input type="text" placeholder="Insira seu nome" />
-                        </label>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <div>
+                            <label>
+                                <p>Seu nome</p>
+                                <input 
+                                    type="text" 
+                                    name="user_name" 
+                                    placeholder="Insira seu nome" 
+                                    value={username} 
+                                    onChange={(e) => handleChangeUsername(e)} 
+                                    required 
+                                />
+                            </label>
 
-                        <label>
-                            <p>seu email</p>
-                            <input type="text" placeholder="Insira seu email"/>
-                        </label>
+                            <label>
+                                <p>seu email</p>
+                                <input 
+                                    type="email" 
+                                    name="user_email" 
+                                    placeholder="Insira seu email" 
+                                    value={email} 
+                                    onChange={(e) => handleChangeEmail(e)} 
+                                    required 
+                                />
+                            </label>
 
-                        <label>
-                            <p>Projeto</p>
-                            <input placeholder="Descreva sobre o seu projeto"></input>
-                        </label>
-                    </div>
+                            <label>
+                                <p>Projeto</p>
+                                <input 
+                                    name="message" 
+                                    placeholder="Descreva sobre o seu projeto" 
+                                    required
+                                ></input>
+                            </label>
+                        </div>
 
-                    <button> Enviar </button>
+                        <button type="submit"> Enviar </button>
+                    </form>
 
                 </section>
             </Div>
         </Fragment>
     );
-}
+};
