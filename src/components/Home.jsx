@@ -58,7 +58,7 @@ const Section = styled.section`
         max-width: 500px;
     }
 
-    `;
+`;
 
 const SocialMedias = styled.div`
 
@@ -68,7 +68,13 @@ const SocialMedias = styled.div`
     margin-top: 8px;
 
     > li {
+
         font-size: 2rem;
+
+        a {
+            color: ${({ theme }) => theme.linkColor};
+        }
+        
     }
 
     > li:first-child {

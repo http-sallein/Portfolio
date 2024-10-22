@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 
 import styled from 'styled-components';
@@ -24,14 +25,22 @@ const Head = styled.header`
     height: 100%;
 
     > section {
+
+
         height: 95%;
         width: 4rem;
         border-radius: 1rem;
-        padding: 1rem;
+        padding: 1rem 2.5rem;
         display: flex;
+        justify-content: space-around;
         flex-direction: column;
         align-items: center;
-        background-color: pink;
+        
+        background-color: ${({ theme }) => theme.navbarColor};
+        box-shadow: 0px 0px 10px 5px #0000001e;
+
+
+        backdrop-filter: blur(4px);
 
         > figure {
             width: 3rem;
@@ -44,7 +53,12 @@ const Head = styled.header`
         } 
 
         > hr {
-            margin: 2rem 0;
+            margin: 1rem 0;
+
+            background-color: ${({ theme }) => theme.backgroundColor};
+
+            height: 1px;
+            width: 50px;
         }
 
         > div {
@@ -63,8 +77,16 @@ const Head = styled.header`
 
                 > a {
                     display: flex;
-                    padding: .5rem;
+                    padding: .5rem;                    
                     border-radius: .5rem;
+                    border-radius: .5rem;
+
+                    color: ${({ theme }) => theme.fontColor};
+
+                    &.active {
+                        background-color: ${({ theme }) => theme.fontColor};
+                        color: ${({ theme }) => theme.backgroundColor};
+                    }
                 }
             }
 
@@ -72,18 +94,37 @@ const Head = styled.header`
                 gap: 1rem;
             }
         }
-
-        .active {
-            background-color: blue;
-        }
-
         .section {
             scroll-snap-align: start;
         }
     }
+
+    @media screen and (max-width: 768px) {
+
+        width: 100vw;
+        height: 4rem;
+        bottom: 1rem;
+        left: 0;
+
+
+        top: initial;
+
+        > section {
+
+            flex-direction: row;
+            width: 95%;
+            height: 4rem;
+
+
+            > div {
+                width: 85%;
+                flex-direction: row;
+            }
+        }
+    }
 `;
 
-export const Header = () => {
+export const Header = ({ toggleTheme, isDarkMode }) => {
     const [activeSection, setActiveSection] = useState(null);
 
     useEffect(() => {
@@ -125,7 +166,7 @@ export const Header = () => {
 
                     <ul>
                         <li><TranslateIcon /></li>
-                        <li><ThemeToggle /></li>
+                        <li> <ThemeToggle toggleTheme={toggleTheme} isDarkMode={isDarkMode} /> </li>
                     </ul>
                 </div>
             </section>

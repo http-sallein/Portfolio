@@ -148,7 +148,7 @@ export const ContactMe = () => {
     const handleChangeEmail = ({ target }) => { setEmail(target.value) }
 
     const sendEmail = (e) => {
-        e.preventDefault(); // Previne o comportamento padrão do formulário
+        e.preventDefault(); 
     
         emailjs.sendForm(
             'service_58vl6h5',
@@ -157,10 +157,10 @@ export const ContactMe = () => {
             'vFYYZcTW_8yw4iuCB'
 
         ).then(() => {
-            alert("E-mail enviado com sucesso!"); // Mensagem de sucesso
-            e.target.reset(); // Reseta o formulário após o envio bem-sucedido
+            alert("E-mail enviado com sucesso!");
+            e.target.reset();
         }).catch((error) => {
-            alert("Ocorreu um erro ao enviar o e-mail. Tente novamente.", error); // Mensagem de erro
+            alert("Ocorreu um erro ao enviar o e-mail. Tente novamente.", error); 
         });
     };
 

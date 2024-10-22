@@ -82,7 +82,7 @@ const ModalContent = styled.div`
 
 
             .swiper-container {
-                max-width: 800px;
+                max-width: 600px !important;
 
                 object-fit: cover;
 
@@ -91,7 +91,6 @@ const ModalContent = styled.div`
 
                     img {
 
-                        opacity: .5;
                     }
                 }
     

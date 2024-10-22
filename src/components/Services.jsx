@@ -6,7 +6,6 @@ import { FaComputer as ComputerIcon } from "react-icons/fa6";
 import { BsLayoutWtf as LayoutIcon} from "react-icons/bs";
 import { MdOutlineAppSettingsAlt as MaintenceIcon} from "react-icons/md";
 
-
 const Title = styled.h2`
 
     font-size: 3rem;
@@ -25,7 +24,6 @@ const Section = styled.section`
     h3 { font-size: 1.5rem; max-width: 300px; text-align: center;}
 
     > div {
-        border: 1px solid black;
         padding: 1rem;
         min-height: 450px;
         max-width: 350px;
@@ -33,7 +31,13 @@ const Section = styled.section`
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        & {
+            border: 1px solid ${({ theme }) => theme.fontColor};
+        }
     }
+
+
 
     span {
         font-size: 4rem;
@@ -51,7 +55,7 @@ const Section = styled.section`
 export const Services = () => {
 
     return (
-
+        
         <Fragment flexDirection={'column'} id={'services'}>
 
             <Title> Serviços. </Title>
